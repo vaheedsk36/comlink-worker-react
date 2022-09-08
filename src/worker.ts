@@ -5,6 +5,6 @@ const worker = {
     runBigtask
 }
 
-export type runBigTaskWorker = typeof worker;
+export type RunBigTaskWorker = typeof worker;
 
 expose(worker);

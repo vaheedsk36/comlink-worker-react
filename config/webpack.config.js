@@ -1,7 +1,6 @@
-'use strict';
-
 const fs = require('fs');
 const path = require('path');
+const WebWorkerPlugin = require('worker-plugin');
 const webpack = require('webpack');
 const resolve = require('resolve');
 const PnpWebpackPlugin = require('pnp-webpack-plugin');
@@ -557,6 +556,7 @@ module.exports = function (webpackEnv) {
       ],
     },
     plugins: [
+      new WebWorkerPlugin(),
       // Generates an `index.html` file with the <script> injected.
       new HtmlWebpackPlugin(
         Object.assign(
